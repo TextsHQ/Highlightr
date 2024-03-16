@@ -10,7 +10,7 @@ import Foundation
 
 #if os(OSX)
     import AppKit
-#elseif os(iOS)
+#elseif canImport(UIKit)
     import UIKit
 #endif
 

@@ -10,7 +10,7 @@ import Foundation
 
 #if os(OSX)
     import AppKit
-#elseif os(iOS)
+#elseif canImport(UIKit)
     import UIKit
 #endif
 
@@ -20,7 +20,7 @@ import Foundation
     public typealias AttributedStringKey = NSAttributedStringKey
 #endif
 
-#if swift(>=4.2) && os(iOS)
+#if swift(>=4.2) && canImport(UIKit)
     public typealias TextStorageEditActions = NSTextStorage.EditActions
 #else
     public typealias TextStorageEditActions = NSTextStorageEditActions
